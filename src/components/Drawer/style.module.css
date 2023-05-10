@@ -1,0 +1,14 @@
+.drawer{
+    width: 40%;
+    height: 100vh;
+    box-shadow: -2px 0 8px 0 #66666666;
+    position: absolute;
+    right: 0;
+    transition: width 0.1s ease-in-out;
+    overflow: hidden auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1em;
+}
