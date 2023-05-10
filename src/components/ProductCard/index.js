@@ -1,7 +1,7 @@
 import style from './style.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
-import { useEffect, useState } from 'react'
+
 
 
 /**
