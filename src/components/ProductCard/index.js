@@ -34,7 +34,7 @@ const ProductCard = props => {
             </div>
             <div className={style.controls}>
                 <p>${props.price}</p>
-                <FontAwesomeIcon color='#979797' icon={faCartShopping} />
+                <FontAwesomeIcon className={style.cartBtn}  icon={faCartShopping} />
             </div>
         </div>
     </div>
