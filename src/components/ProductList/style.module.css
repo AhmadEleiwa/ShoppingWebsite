@@ -1,6 +1,13 @@
-.list {
+.productList{
     width: 80%;
     margin:  8em auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    color: #474747;
+}
+.list {
+   
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5em;   

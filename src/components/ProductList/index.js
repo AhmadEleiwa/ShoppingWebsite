@@ -10,17 +10,21 @@ const ProductList = props => {
             .then(res => res.json())
             .then(json => setProducts(json))
     }, [])
-
-    return <div className={style.list}>
-        {products.map(item => {
-            return <ProductCard
-                key={item.id}
-                title={item.title}
-                description={item.description.slice(0,50)}
-                Img={item.image}
-                price={item.price}
-            />
-        })}
+    return <div className={style.productList}>
+        <h1>
+            Trending Items
+        </h1>
+        <div className={style.list}>
+            {products.map(item => {
+                return <ProductCard
+                    key={item.id}
+                    title={item.title}
+                    description={item.description.slice(0, 50)}
+                    Img={item.image}
+                    price={item.price}
+                />
+            })}
+        </div>
     </div>
 }
 
