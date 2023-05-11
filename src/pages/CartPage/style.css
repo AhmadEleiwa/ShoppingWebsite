@@ -1,0 +1,11 @@
+.cart-page{
+    width: 80%;
+    display: flex;
+    align-items: flex-start;
+    gap: 2em;
+    margin: 0 auto;
+}
+
+.cart-page > *{
+    margin-top: 6em;
+}
