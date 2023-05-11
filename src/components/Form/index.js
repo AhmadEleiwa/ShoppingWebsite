@@ -1,8 +1,12 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import style from './style.module.css'
+import { CartContext } from '../../hooks/useCart'
 
 const Form = props => {
     const [formData, setFormData]= useState({name:'', email:''})
+
+    const cartContext = useContext(CartContext)
+
     const onInputHandler = event => {
          const name = event.target.name
          const value = event.target.value
@@ -11,15 +15,21 @@ const Form = props => {
     }
     const onSubminHandler = e =>{
         e.preventDefault()
-        // some logic her to sned form data and clear cart
+      
+        if(window.confirm("Are you sure") == true){
+            cartContext.clear()
+            alert("done")
+        }
 
+
+        
     }
 
 
     return <div className={style.conformForm}> 
         <form onSubmit={onSubminHandler}>
-            <input name='name' className={style.input} onInput={onInputHandler} placeholder='Name' />
-            <input name='email' className={style.input} onInput={onInputHandler}  type='email' placeholder='Email' />
+            <input name='name' className={style.input} required onInput={onInputHandler} placeholder='Name' />
+            <input name='email' className={style.input} required onInput={onInputHandler}  type='email' placeholder='Email' />
             <button className={style.btn}>Conform</button>
         </form>
     </div>
