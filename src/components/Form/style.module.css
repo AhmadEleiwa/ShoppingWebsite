@@ -1,0 +1,43 @@
+.conformForm {
+    width: 376px;
+    height: 324px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px #AFAFAFBF;
+}
+
+.conformForm form {
+    width: 80%;
+    display: grid;
+    gap: 1em;
+
+}
+
+.conformForm form input {
+
+    padding: 1.3em 2em;
+    box-shadow: 5px 5px 20px #B5B5B533;
+    border: 1px solid rgba(190, 190, 190, 0.5);
+    border-radius: 5px;
+    color: #474747;
+
+}   
+
+.btn {
+    width: 169.62px;
+    height: 56px;
+    background-color: #0880AE;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    margin: 0 auto;
+
+    transition: all 0.17s ease-in-out;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0880AEaa;
+
+}
