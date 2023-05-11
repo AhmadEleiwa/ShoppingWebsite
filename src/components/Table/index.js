@@ -1,4 +1,4 @@
-import  './style.module.css'
+import  './style.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faX} from '@fortawesome/free-solid-svg-icons'
 /**
