@@ -7,10 +7,12 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 /**
  * 
  * @param {{
+ * id:String
  * title: String,
  * description: String,
  * Img: String,
  * price: Number
+ * addProduct : ({id,title,description, price})=>{}
  * }} props 
  * @returns 
  */
@@ -18,8 +20,12 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 const ProductCard = props => {
 
     const addCartHandler = () => {
-        // here the code
-
+        props.addProduct({
+            id:props.id,
+            title:props.title,
+            description:props.description,
+            price:props.price
+        })
     }
 
 
@@ -34,7 +40,7 @@ const ProductCard = props => {
             </div>
             <div className={style.controls}>
                 <p>${props.price}</p>
-                <FontAwesomeIcon className={style.cartBtn}  icon={faCartShopping} />
+                <FontAwesomeIcon className={style.cartBtn} onClick={addCartHandler}  icon={faCartShopping} />
             </div>
         </div>
     </div>
