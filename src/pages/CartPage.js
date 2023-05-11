@@ -5,10 +5,10 @@ import { CartContext } from "../hooks/useCart"
 
 
 const CartPage = props => {
-    const cartContext = useContext(CartContext)
+   
 
     return <div>
-        <Table headings={['Title', "Price", 'Quantity']}  items={cartContext.data} />
+        <Table headings={['Title', "Price", 'Quantity']}  />
     </div>
 }
 
