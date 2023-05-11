@@ -5,6 +5,7 @@ import {faX} from '@fortawesome/free-solid-svg-icons'
  * 
  * @param {{
  * items: [{
+ *  id:String
  *  title:String,
  *  price:Number,
  *  quantity:Number
@@ -33,7 +34,7 @@ const Table = props => {
             <th></th>
         </tr>
         {props.items && props.items.map(item => {
-            return <tr>
+            return <tr key={item.id}>
                 <td>{item.title}</td>
                 <td>{item.price}</td>
                 <td>{item.quantity}</td>
