@@ -14,10 +14,11 @@ import { useContext } from 'react'
 const Table = props => {
     const cartContext = useContext(CartContext)
 
-    return <table cellpadding="0" border="0" align="center" cellspacing="0" >
+    return <table cellPadding="0" border="0" align="center" cellSpacing="0" >
+        <tbody>
         <tr>
-            {props.headings && props.headings.map(item => {
-                return <th>
+            {props.headings && props.headings.map((item,index) => {
+                return <th key={index}>
                     {item}
                 </th>
 
@@ -36,6 +37,7 @@ const Table = props => {
                 </td>
             </tr>
         })}
+        </tbody>
     </table>
 }
 export default Table
