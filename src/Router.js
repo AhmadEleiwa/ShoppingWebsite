@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Home from "./pages/Home"
 import { CartProvider } from './hooks/useCart';
 import CartPage from "./pages/CartPage";
-import { useEffect, useState } from "react";
+
 
 
 const Router = () => {
