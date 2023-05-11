@@ -1,26 +1,12 @@
-import Form from "../components/Form"
-import ProductList from "../components/ProductList"
-import Table from "../components/Table"
+import { Link } from 'react-router-dom'
+import ProductList from '../components/ProductList'
 
 
-const Home = () => {
- 
-    // const {cart, addProduct,clear,deleteProduct}= useCart()
 
-    
+const Home = props => {
     return <div >
-
-
-        <Table
-         headings={['Title', 'Price', 'Quantity' ]}
-         items={[
-            {title:"Macbook", price:44,quantity:4},
-            {title:"Macbook", price:44,quantity:4},
-            {title:"Macbook", price:44,quantity:4},
-
-         ]}
-         />
-         <Form />
+        <Link to={'/cart'}>cart</Link>
+        <ProductList  />
     </div>
 }
 
