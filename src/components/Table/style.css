@@ -5,7 +5,7 @@ tr:nth-child(even){
     background-color: #F8F8F8;
 }
 table{
-    width: 80%;
+    width: 100%;
     text-align: left;
     color: #474747;
     box-shadow: 5px 5px 20px #B5B5B520;
