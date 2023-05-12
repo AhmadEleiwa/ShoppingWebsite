@@ -16,9 +16,10 @@ const Form = props => {
     const onSubminHandler = e =>{
         e.preventDefault()
       
-        if(window.confirm("Are you sure") == true){
+        if(window.confirm("Are you sure") === true){
             cartContext.clear()
-            alert("done")
+            alert("done "+ formData.name+ " sending confirm email to " + formData.email)
+            
         }
 
 
