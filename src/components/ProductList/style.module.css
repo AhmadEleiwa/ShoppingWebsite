@@ -1,16 +1,18 @@
-.productList{
+.productList {
     width: 80%;
-    margin:  8em auto;
+    margin: 8em auto;
     display: flex;
+
     flex-direction: column;
-    gap: 2em;
+    gap: 4em;
     color: #474747;
 }
+
 .list {
-   
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1.5em;   
+    gap: 1.5em;
 }
 
 
