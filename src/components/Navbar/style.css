@@ -1,0 +1,28 @@
+nav{
+    width: 10em;
+    height:4em;
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    border:1px solid #A4A4A44D;
+    box-shadow:  5px 5px 20px #85858533;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    position: absolute;
+    right: 10%;
+    top: 4%;
+}
+
+nav a{
+    text-decoration: none;
+    color: #585858;
+    font-size: 2.3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav a img{
+    width: 80%;
+    margin: 0 auto;
+}

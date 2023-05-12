@@ -1,0 +1,17 @@
+.cart-page{
+    width: 80%;
+    display: flex;
+    align-items: flex-start;
+    gap: 2em;
+    margin: 4em auto;
+}
+
+.cart-page > *{
+    margin-top: 6em;
+}
+@media screen and (max-width:720px) {
+    .cart-page {
+    
+        flex-direction: column;
+    }
+}

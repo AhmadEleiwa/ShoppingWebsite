@@ -1,26 +1,12 @@
-import Form from "../components/Form"
-import ProductList from "../components/ProductList"
-import Table from "../components/Table"
+import ProductList from '../components/ProductList'
 
 
-const Home = () => {
- 
-    // const {cart, addProduct,clear,deleteProduct}= useCart()
-
-    
-    return <div >
 
 
-        <Table
-         headings={['Title', 'Price', 'Quantity' ]}
-         items={[
-            {title:"Macbook", price:44,quantity:4},
-            {title:"Macbook", price:44,quantity:4},
-            {title:"Macbook", price:44,quantity:4},
+const Home = props => {
+    return <div style={{marginTop:'2em'}} >
 
-         ]}
-         />
-         <Form />
+        <ProductList  />
     </div>
 }
 

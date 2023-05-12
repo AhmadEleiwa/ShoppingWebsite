@@ -19,6 +19,10 @@ td, th{
     margin: 0;
     padding: 1em 2em;
     font-size: 14px;
+    width: 25%;
+}
+.x-icon{
+    text-align: right;
 }
 th{
     background-color: #FFFFFF;

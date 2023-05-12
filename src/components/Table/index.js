@@ -1,45 +1,43 @@
-import  './style.css'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faX} from '@fortawesome/free-solid-svg-icons'
+import './style.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faX } from '@fortawesome/free-solid-svg-icons'
+import { CartContext } from '../../hooks/useCart'
+import { useContext } from 'react'
 /**
  * 
  * @param {{
- * items: [{
- *  title:String,
- *  price:Number,
- *  quantity:Number
- * }]
  * headings: [String]
  * }} props 
  * @returns 
  */
 
 const Table = props => {
+    const cartContext = useContext(CartContext)
 
-    const deleteHandler = () =>{
-        //  some logic to handle deleting
-
-    }
-
-
-    return <table cellpadding="0" border="0" align="center" cellspacing="0" >
+    return <table cellPadding="0" border="0" align="center" cellSpacing="0" >
+        <tbody>
         <tr>
-            {props.headings && props.headings.map(item => {
-                return <th>
+            {props.headings && props.headings.map((item,index) => {
+                return <th key={index}>
                     {item}
                 </th>
 
             })}
             <th></th>
         </tr>
-        {props.items && props.items.map(item => {
-            return <tr>
+        {cartContext.data.map(item => {
+            return <tr key={item.id}>
                 <td>{item.title}</td>
-                <td>{item.price}</td>
+                <td>${item.price}</td>
                 <td>{item.quantity}</td>
-                <td><FontAwesomeIcon color='#0880AE' cursor={'pointer'} icon={faX} /></td>
+                <td className='x-icon'>
+                    <FontAwesomeIcon color='#0880AE' cursor={'pointer'}
+                        onClick={() => { cartContext.deleteProduct(item.id) }}
+                        icon={faX} />
+                </td>
             </tr>
         })}
+        </tbody>
     </table>
 }
 export default Table
